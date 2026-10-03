@@ -13,7 +13,6 @@ public class ProductoService {
         this.productoRepo = productoRepo;
     }
 
-    // BUG intencional: Validaciones.validarPrecio acepta 0 y negativos
     public void registrarProducto(int id, String nombre, double precio) {
 
         if (!Validaciones.validarPrecio(precio)) {

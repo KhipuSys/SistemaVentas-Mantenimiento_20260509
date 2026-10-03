@@ -22,6 +22,11 @@ public class ReporteService {
 
         Console.info("=== REPORTE DE VENTAS ===");
 
+        if (ventas.isEmpty()) {
+            Console.info("No hay ventas registradas.");
+            return;
+        }
+
         int i = 1;
         for (Venta v : ventas) {
             Console.info("Venta #" + i + " Cliente: " + v.getCliente().getNombre());
@@ -38,9 +43,11 @@ public class ReporteService {
         }
     }
 
-    // BUG intencional: si no hay ventas, no informa nada
     public void mostrarResumen() {
         int totalVentas = ventaRepo.contarVentas();
+        if (totalVentas == 0) {
+            Console.info("No hay ventas registradas.");
+        }
         Console.info("TOTAL VENTAS: " + totalVentas);
     }
 }

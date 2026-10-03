@@ -6,6 +6,9 @@ public class VentaDetalle {
     private int cantidad;
 
     public VentaDetalle(Producto producto, int cantidad) {
+        if (cantidad <= 0) {
+            throw new IllegalArgumentException("La cantidad debe ser mayor que 0");
+        }
         this.producto = producto;
         this.cantidad = cantidad;
     }
@@ -19,7 +22,6 @@ public class VentaDetalle {
     }
 
     public double calcularSubtotal() {
-        // BUG intencional: si cantidad negativa, subtotal negativo (no valida)
         return producto.getPrecio() * cantidad;
     }
 }

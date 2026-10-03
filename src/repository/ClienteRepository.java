@@ -29,4 +29,6 @@ public class ClienteRepository implements IClienteRepository {
     public List<Cliente> listar() {
         return clientes;
     }
+
+    //
 }

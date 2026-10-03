@@ -12,7 +12,6 @@ public class Main {
 
     public static void main(String[] args) {
 
-        //llamada a los metodos de constructor
         ClienteRepository clienteRepository = new ClienteRepository();
         ClienteService clienteService = new ClienteService(clienteRepository);
 

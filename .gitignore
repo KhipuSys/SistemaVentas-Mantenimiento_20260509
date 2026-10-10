@@ -1,8 +1,6 @@
 # SCM: reglas de ignorado del proyecto
 *.class
 *.log
-bin/
-out/
 target/
 .idea/
 .vscode/

@@ -1,3 +1,4 @@
+# SCM: reglas de ignorado del proyecto
 *.class
 *.log
 bin/
